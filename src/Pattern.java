@@ -1,4 +1,3 @@
-package src;
 public class Pattern {
     public String getSmallestNumber(String pattern) {
 

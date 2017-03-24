@@ -1,4 +1,3 @@
-package src;
 public class MaxConsecutiveChar {
 
     public static void main(String[] arg) {

@@ -1,4 +1,3 @@
-package src;
 public class HeapSort {
     private static int[] a;
     private static int n;

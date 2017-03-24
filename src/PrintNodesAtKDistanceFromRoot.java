@@ -1,4 +1,3 @@
-package src;
 public class PrintNodesAtKDistanceFromRoot {
 
     private static class Node {

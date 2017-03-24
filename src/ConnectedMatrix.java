@@ -1,4 +1,3 @@
-package src;
 public class ConnectedMatrix {
 
     public static void main(String[] args) {

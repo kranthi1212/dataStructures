@@ -1,4 +1,3 @@
-package src;
 public class MergeSort {
     private static int[] numbers;
     private static int[] helper;
