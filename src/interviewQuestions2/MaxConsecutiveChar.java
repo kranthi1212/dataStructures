@@ -1,3 +1,4 @@
+package interviewQuestions2;
 public class MaxConsecutiveChar {
 
     public static void main(String[] arg) {

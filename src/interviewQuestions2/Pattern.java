@@ -1,3 +1,4 @@
+package interviewQuestions2;
 public class Pattern {
     public String getSmallestNumber(String pattern) {
 

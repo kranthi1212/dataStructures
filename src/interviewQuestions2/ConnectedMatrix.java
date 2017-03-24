@@ -1,3 +1,4 @@
+package interviewQuestions2;
 public class ConnectedMatrix {
 
     public static void main(String[] args) {
