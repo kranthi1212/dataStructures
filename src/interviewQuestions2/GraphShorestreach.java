@@ -83,7 +83,7 @@ public class GraphShorestreach {
 
 	    // Create a graph of size n where each edge weight is 6:
 	    Graph graph = new Graph(scanner.nextInt());
-	    int m = scanner.nextInt();
+	    int m = scanner.nextInt(); 
 	    // read and set edges
 	    for (int i = 0; i < m; i++) {
 		int u = scanner.nextInt() - 1;
