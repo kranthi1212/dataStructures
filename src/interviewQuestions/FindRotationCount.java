@@ -24,7 +24,6 @@ public class FindRotationCount {
 
 	int low = 0, high = a.length - 1;
 	int n = a.length - 1;
-	// int mid = high +0)
 
 	while (low <= high) {
 
