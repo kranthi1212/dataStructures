@@ -14,8 +14,10 @@ public class MinCoinChangeSoultion {
      * @param args
      */
     public static void main(String[] args) {
-	int[] coins = { 1, 2, 3, 5 };
-	int changeFor = 4;
+	// int[] coins = { 1, 2, 3, 5 };
+	// int changeFor = 4;
+	int[] coins = { 1, 3, 6, 9, 10 };
+	int changeFor = 10;
 	Map<String, Long> results = new HashMap<>();
 	minChange(changeFor, coins, 0, results);
 	System.out.println(minChange(changeFor, coins, 0, results));
