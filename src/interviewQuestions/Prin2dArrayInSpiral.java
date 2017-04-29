@@ -19,35 +19,35 @@ public class Prin2dArrayInSpiral {
     }
 
     private static void printinSprial(int[][] a, int row, int col) {
-	int l, r, b, t;
+	int l, c, r, t;
 	t = 0;
-	r = col;
+	c = col;
 	l = 0;
-	b = row;
+	r = row;
 	int dir = 0;// 0 up; 1 down;2 left;3 right;
 
-	while (t <= b && l <= r) {
+	while (t <= r && l <= c) {
 	    if (dir == 0) {
-		for (int i = t; i <= r; i++) {
+		for (int i = t; i <= c; i++) {
 		    System.out.print(a[t][i] + " ");
 		}
 		dir = 1;
 		t++;
 	    } else if (dir == 1) {
 
-		for (int i = t; i <= r; i++) {
-		    System.out.print(a[i][r] + " ");
+		for (int i = t; i <= c; i++) {
+		    System.out.print(a[i][c] + " ");
 		}
-		r--;
+		c--;
 		dir = 2;
 	    } else if (dir == 2) {
-		for (int i = r; i >= l; i--) {
-		    System.out.print(a[b][i] + " ");
+		for (int i = c; i >= l; i--) {
+		    System.out.print(a[r][i] + " ");
 		}
-		b--;
+		r--;
 		dir = 3;
 	    } else if (dir == 3) {
-		for (int i = b; i >= t; i--) {
+		for (int i = r; i >= t; i--) {
 		    System.out.print(a[i][l] + " ");
 		}
 		l++;
