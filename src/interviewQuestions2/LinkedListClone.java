@@ -56,8 +56,8 @@ public class LinkedListClone {
 	// clone.arbitPtr = original.arbitPtr;
 	//
 	// }
-
-	return cache.get(head);
+	curr = head;
+	return cache.get(curr);
     }
 
     public static void main(String[] args) {
