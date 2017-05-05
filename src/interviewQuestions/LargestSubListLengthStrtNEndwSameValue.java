@@ -1,7 +1,6 @@
 package interviewQuestions;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
@@ -29,38 +28,49 @@ import java.util.Map.Entry;
 
 public class LargestSubListLengthStrtNEndwSameValue {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		List<Integer> list = new ArrayList<>();
-		list.add(2);
-		list.add(4);
-		list.add(6);
-		list.add(8);
-		list.add(3);
-		list.add(6);
-		list.add(5);
-		list.add(4);
-		list.add(7);
+	List<Integer> list = new ArrayList<>();
+	list.add(2);
+	list.add(4);
+	list.add(6);
+	list.add(8);
+	list.add(3);
+	list.add(6);
+	list.add(5);
+	list.add(4);
+	list.add(7);
 
-		HashMap<Integer, List<Integer>> map = new HashMap<>();
+	HashMap<Integer, List<Integer>> map = new HashMap<>();
 
-		for (int i =0;i<list.size();i++) {
-			if (map.containsKey(list.get(i))) {
-				map.get(list.get(i)).add(i);
-			}else{
-				List temp = new  ArrayList<>();
-				temp.add(i);
-				map.put(list.get(i), temp);
-			}
-		}
-		List<Integer> temp= new ArrayList<>();
-		for(Entry<Integer,List<Integer>> e : map.entrySet()){
-			List<Integer> value = e.getValue();
-			  if(value.size()==2){
-				  temp.add(value.get(1)-value.get(0)+1);
-			  }
-		}
-		Collections.sort(temp);
-		System.out.println(temp.get(temp.size()-1));
+	for (int i = 0; i < list.size(); i++) {
+	    if (map.containsKey(list.get(i))) {
+		map.get(list.get(i))
+			.add(i);
+	    } else {
+		List<Integer> temp = new ArrayList<>();
+		temp.add(i);
+		map.put(list.get(i), temp);
+	    }
 	}
+	int max = 0;
+	int tmp = 0;
+
+	for (Entry<Integer, List<Integer>> e : map.entrySet()) {
+	    List<Integer> value = e.getValue();
+	    if (e.getValue()
+		    .size() == 2) {
+		tmp = value.get(1) - value.get(0) + 1;
+
+		if (tmp > max) {
+		    max = tmp;
+		    tmp = 0;
+		}
+
+	    }
+	}
+	// Collections.sort(temp);
+	// System.out.println(temp.get(temp.size() - 1));
+	System.out.println(max);
+    }
 }
